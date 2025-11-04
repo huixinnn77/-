@@ -4,7 +4,7 @@ let currentPlan = "";
 
 function initMap() {
   const location = { lat: 25.0330, lng: 121.5654 }; // 台北101
-  const map = new google.maps.Map(document.getElementById("map"), {
+  map = new google.maps.Map(document.getElementById("map"), {
     zoom: 15,
     center: location,
   });
@@ -44,7 +44,7 @@ async function showMap(city) {
 }
 
 async function getWeather(city) {
-  const apiKey = "YOUR_OPENWEATHERMAP_API_KEY";
+  const apiKey = "AIzaSyBzYH3TIWNaRH19B0sABxiFQA-H7XrOoZI";
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=zh_tw`;
 
   const res = await fetch(url);
